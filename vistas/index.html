@@ -7,8 +7,19 @@
     <title>titulo</title>
 </head>
 <body>
-    <p>aplicacion renderizada</p>
 
-    <script src=""></script>
+    <div class="container">
+        <input type="text" placeholder="Concept" id="concept" required>
+        <input type="number" placeholder="Amount" id="amount" required>
+        <input type="date" id="date">
+        <select name="type" id="type_oper">
+            <option disabled selected value>type</option>
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+        </select>
+        <button id="btn_submit">Add movement</button>
+    </div>
+
+    <script src="funciones.js"></script>
 </body>
 </html>

@@ -3,21 +3,21 @@ import mysql from 'mysql';
 
 // create connection to mysql
 
-const connection = mysql.createConnection(
+const connectio = mysql.createConnection(
     {
         host: 'localhost',
         user: 'challenge',
         password: '123456',
-        database: 'budget'
+        database: 'personal_budget'
     }
 )
 
-const connector = () => {
-    connection.connect(err => {
+const connecto= ()=> {
+    connectio.connect(err => {
         if(err) throw err
         console.log('conectado')
     })
 }
 
 
-export{connector};
+export{connecto}

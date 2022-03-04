@@ -1,5 +1,5 @@
 import express from "express"; //Se importa express
-import {connector} from './src/mysql_connector.js'
+import {connecto} from './src/mysql_connector.js'
 
 //Inicio de express y el servidor
 const app = express()
@@ -15,9 +15,13 @@ app.use(express.static('./src'))
 app.use(express.static('./css'))
 
 
-
-
 app.get('/', (req, res) => {
-    connector()
+    connecto()
     res.render('index.html')
+})
+
+app.get('/add/:concept/:amount',(req,res)=>{
+    let concept = req.params.concept
+    let amount = req.params.amount_val
+    console.log(concept, amount_val())
 })
